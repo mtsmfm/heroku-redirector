@@ -1,0 +1,22 @@
+{
+  "name": "heroku-redirector",
+  "repository": "https://github.com/mtsmfm/heroku-redirector",
+  "env":{
+    "REDIRECT_TO": {
+      "required": true
+    },
+    "NGINX_WORKERS": {
+      "value": "4",
+      "required": false
+    }
+  },
+  "addons": [
+    "papertrail:choklad",
+    "newrelic:wayne"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/ryandotsmith/nginx-buildpack"
+    }
+  ]
+}
